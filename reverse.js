@@ -1,9 +1,14 @@
-let arr = [48,23,45,5,47,767,89,30,26,16,38];
+let arr = [1,0,0,1,0,0,1,1,1,0,0,0];
 
-let temp = new Array(arr.length);
-let i = 0;
-for(let j = arr.length-1;j>=0;j--){
-    temp[i] = arr[j];
+let i=0;
+let j=0;
+while(i<arr.length){
+    if(arr[i]==0){
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+        j++;
+    }
     i++;
 }
-console.log("Reversed array: "+temp);
+console.log(arr);
